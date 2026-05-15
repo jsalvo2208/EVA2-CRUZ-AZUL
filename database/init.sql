@@ -1,13 +1,11 @@
 CREATE TABLE IF NOT EXISTS productos (
     id SERIAL PRIMARY KEY,
     nombre VARCHAR(100) NOT NULL,
-    categoria VARCHAR(50),
-    precio INT NOT NULL,
-    stock INT NOT NULL
+    precio DECIMAL(10, 2) NOT NULL,
+    stock INTEGER NOT NULL
 );
 
-INSERT INTO productos (nombre, categoria, precio, stock) VALUES
-('Paracetamol 500mg', 'Analgésico', 1500, 100),
-('Ibuprofeno 400mg', 'Antiinflamatorio', 2200, 50),
-('Vitamina C 1g', 'Suplemento', 4500, 30),
-('Amoxicilina 500mg', 'Antibiótico', 8990, 20);
+INSERT INTO productos (nombre, precio, stock) VALUES
+('Paracetamol 500mg', 1500.00, 100),
+('Ibuprofeno 400mg', 2200.00, 50),
+('Aspirina 100mg', 3500.00, 80);
